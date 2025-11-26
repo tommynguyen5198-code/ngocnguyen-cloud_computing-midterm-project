@@ -31,12 +31,16 @@ Docker compose
 git clone <your-repo-url>
 cd ngocnguyen-cloud_computing-midterm-project
 ```
-### 2. Build and run the containers:
+### 2. Create logs directory:
+```
+mkdir -p logs
+```
+### 3. Build and run the containers:
 
 ```
 docker compose up -d
 ```
-### 3. Verify the application is running:
+### 4. Verify the application is running:
 
 ```
 # Check frontend
@@ -46,7 +50,7 @@ curl "http://localhost:8089/"
 curl "http://localhost:8089/api/log"
 ```
 
-### 4. Monitor logs in real-time:
+### 5. Monitor logs in real-time:
 ```
 tail -f logs/lha_access.log
 ```
