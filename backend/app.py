@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 log_path = os.getenv("LOG_PATH", "/logs")
-name = "<your name>"
+name = "ngocnguyen"
 
 @app.route('/')
 def home():
