@@ -1,7 +1,7 @@
 FROM python:3.10.19
 WORKDIR /app
 COPY requirement.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirement.txt
 
 COPY . .
 EXPOSE 5000

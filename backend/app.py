@@ -2,14 +2,17 @@ from flask import Flask
 import os
 
 app = Flask(__name__)
+
 log_path = os.getenv("LOG_PATH", "/logs")
+name = "<your name>"
+
 @app.route('/')
 def home():
-    return f"Hello from Flask backend of NgocNguyen!"
+    return f"Hello from Flask backend of {name}!"
 
 @app.route('/log')
 def write_log():
-    with open(f"{log_path}/ngocnguyen_access.log", "a") as f:
+    with open(f"{log_path}/{name}_access.log", "a") as f:
         f.write("Flask route /log was accessed\n")
     return "Log entry added."
 
